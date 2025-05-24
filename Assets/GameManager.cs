@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -43,5 +44,10 @@ public class GameManager : MonoBehaviour
         grabbable.Launch(spawnpoint.up);
 
         StartCoroutine(Spawn());
+    }
+
+    public static void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
