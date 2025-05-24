@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject pointerTarget;
     [SerializeField] private GameObject thumbTarget;
-    [SerializeField] private GameObject grabbableItem;
+    [SerializeField] private List<GameObject> grabbableItems;
 
     public List<Transform> spawnpoints;
 
@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         Transform spawnpoint = spawnpoints[Random.Range(0, spawnpoints.Count)];
-        GameObject item = Instantiate(grabbableItem, spawnpoint);
+        GameObject prefab = grabbableItems[Random.Range(0,grabbableItems.Count)];
+        GameObject item = Instantiate(prefab, spawnpoint);
 
         Grabbable grabbable = item.GetComponent<Grabbable>();
         grabbable.SetFingerAndThumb(pointerTarget, thumbTarget);

@@ -39,15 +39,9 @@ public class Grabbable : MonoBehaviour
     {
         if (circleCollider2D.IsTouchingLayers(pointerFinger) && circleCollider2D.IsTouchingLayers(thumb))
         {
-            spriteRenderer.color = Color.red;
-
             Vector3 betweenFingers = (pointerTarget.transform.position + thumbTarget.transform.position) / 2;
 
             transform.position = betweenFingers;
-        }
-        else
-        {
-            spriteRenderer.color = Color.green;
         }
     }
 }
