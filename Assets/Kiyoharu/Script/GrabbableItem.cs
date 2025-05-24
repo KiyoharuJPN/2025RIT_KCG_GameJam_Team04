@@ -4,7 +4,6 @@ public class GrabbableItem : Grabbable
 {
     private Bottle Bottleobj = null;
     bool isDraging = false;
-    public bool isTutorial = false;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -23,11 +22,6 @@ public class GrabbableItem : Grabbable
         {
             if (Bottleobj != null && isDraging)
             {
-                if (isTutorial)
-                {
-                    FindFirstObjectByType<SceneTransition>().gameObject.SetActive(true);
-                }
-
                 gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 gameObject.layer = LayerMask.NameToLayer("BottleItem");
                 Bottleobj.JoinBottle(gameObject);
