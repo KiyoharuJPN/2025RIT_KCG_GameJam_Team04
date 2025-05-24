@@ -8,13 +8,13 @@ public class Grabbable : MonoBehaviour
 
     private CircleCollider2D circleCollider2D;
     private SpriteRenderer spriteRenderer;
-    private Rigidbody2D rigidbody2D;
+    private SpringJoint2D springJoint2D;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         circleCollider2D = GetComponent<CircleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        springJoint2D = GetComponent<SpringJoint2D>();
     }
 
     // Update is called once per frame
@@ -23,12 +23,10 @@ public class Grabbable : MonoBehaviour
         if (circleCollider2D.IsTouchingLayers(pointerFinger) && circleCollider2D.IsTouchingLayers(thumb))
         {
             spriteRenderer.color = Color.red;
-            transform.parent = pointerTarget.transform;
         }
         else
         {
             spriteRenderer.color = Color.green;
-            transform.parent = null;
         }
     }
 }
