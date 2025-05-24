@@ -181,8 +181,10 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
                 var wrist = result.handLandmarks[0].landmarks[0];
                 var pointer = result.handLandmarks[0].landmarks[8];
 
-                Vector3 handDirection = (new Vector3(wrist.x, wrist.y, wrist.z) - new Vector3(pointer.x, pointer.y, pointer.z)).normalized;
+                Vector2 handDirection = (new Vector2(wrist.x, -wrist.y) - new Vector2(pointer.x, -pointer.y)).normalized;
                 HandData.handAngle = handDirection;
+
+                HandData.pointerPosition = new Vector3(pointer.x, pointer.y, pointer.z);
             }
         }
     }
@@ -190,5 +192,6 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
 public static class HandData
 {
-    public static Vector3 handAngle;
+    public static Vector2 handAngle;
+    public static Vector3 pointerPosition;
 }
