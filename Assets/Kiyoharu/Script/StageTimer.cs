@@ -2,7 +2,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StagerTimer : MonoBehaviour
+public class StageTimer : MonoBehaviour
 {
     public float EndSecond;
     private float Timer = 0;
@@ -19,7 +19,8 @@ public class StagerTimer : MonoBehaviour
         }
         if (CheckTimerOver())
         {
-            GameManager.GameOver();
+            GameInstance.instance.SaveItems(GameObject.Find("Bottle"));
+            GameInstance.GameOver();
         }
     }
 
