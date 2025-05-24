@@ -19,7 +19,7 @@ public class StagerTimer : MonoBehaviour
         }
         if (CheckTimerOver())
         {
-            
+            GameManager.GameOver();
         }
     }
 
