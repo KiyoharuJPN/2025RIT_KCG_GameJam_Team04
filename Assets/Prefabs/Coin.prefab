@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &850212198640143055
+--- !u!1001 &7821471745174121353
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,15 +11,7 @@ PrefabInstance:
     - target: {fileID: 692571881999290151, guid: ef1dfd73aa91fdf43b30d70b41a273b2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -436593783378482842, guid: 170446f42f5eab94db768648dc51618a, type: 3}
-    - target: {fileID: 692571881999290151, guid: ef1dfd73aa91fdf43b30d70b41a273b2, type: 3}
-      propertyPath: m_SortingOrder
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 692571881999290151, guid: ef1dfd73aa91fdf43b30d70b41a273b2, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -7155594117075031940, guid: 170446f42f5eab94db768648dc51618a, type: 3}
     - target: {fileID: 4066259423112578675, guid: ef1dfd73aa91fdf43b30d70b41a273b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -62,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4899542750908214234, guid: ef1dfd73aa91fdf43b30d70b41a273b2, type: 3}
       propertyPath: m_Name
-      value: Sushi
+      value: Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
