@@ -937,21 +937,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 86226714246686302, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
-      propertyPath: m_PresetInfoIsWorld
+    - target: {fileID: 2750850249283735593, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
+      propertyPath: m_Color.a
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 308249821558531326, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
-      propertyPath: m_RenderMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432132788613350384, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432132788613350384, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3611301982558278068, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
       propertyPath: m_Pivot.x
@@ -984,18 +972,6 @@ PrefabInstance:
     - target: {fileID: 3611301982558278068, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
       propertyPath: m_SizeDelta.y
       value: 701
-      objectReference: {fileID: 0}
-    - target: {fileID: 3611301982558278068, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3611301982558278068, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3611301982558278068, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3611301982558278068, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1045,20 +1021,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5477474790452777686, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 6249516648080692756, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
       propertyPath: m_Name
       value: TimeCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 8499557262589103302, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2341634222854412249, guid: b6122aa27f01b9d458094227a1a05efb, type: 3}
+    - target: {fileID: 9000733943228728686, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 915801730053670630, guid: e00d1e2d2b0aa074c85e8815ed029b6e, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5139506932454999868, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c3fb7b95860a2c49916cb1bf12f34c2, type: 3}
