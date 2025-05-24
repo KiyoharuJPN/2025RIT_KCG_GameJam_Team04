@@ -1,11 +1,14 @@
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StagerTimer : MonoBehaviour
 {
     public float EndSecond;
     private float Timer = 0;
-    private bool TimerRunning = false;
+    private bool TimerRunning = true;
+    [SerializeField]
+    private Image image;
 
     // Update is called once per frame
     void Update()
@@ -16,13 +19,13 @@ public class StagerTimer : MonoBehaviour
         }
         if (CheckTimerOver())
         {
-
+            
         }
     }
 
     private void FixedUpdate()
     {
-        
+        image.fillAmount = Timer / EndSecond;
     }
 
     
@@ -33,6 +36,7 @@ public class StagerTimer : MonoBehaviour
     {
         if (Timer >= EndSecond)
         {
+            Timer = EndSecond;
             return true;
         }
         else
