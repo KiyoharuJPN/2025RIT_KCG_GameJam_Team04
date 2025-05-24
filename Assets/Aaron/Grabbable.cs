@@ -4,8 +4,8 @@ public class Grabbable : MonoBehaviour
 {
     [SerializeField] private LayerMask pointerFinger;
     [SerializeField] private LayerMask thumb;
-    [SerializeField] private GameObject pointerTarget;
-    [SerializeField] private GameObject thumbTarget;
+    private GameObject pointerTarget;
+    private GameObject thumbTarget;
 
     private CircleCollider2D circleCollider2D;
     private SpriteRenderer spriteRenderer;
@@ -17,6 +17,12 @@ public class Grabbable : MonoBehaviour
         circleCollider2D = GetComponent<CircleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    public void SetFingerAndThumb(GameObject pointer, GameObject thumb)
+    {
+        pointerTarget = pointer;
+        thumbTarget = thumb;
     }
 
     // Update is called once per frame
