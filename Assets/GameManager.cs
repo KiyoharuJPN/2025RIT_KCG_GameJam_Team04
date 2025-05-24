@@ -45,9 +45,4 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(Spawn());
     }
-
-    public static void GameOver()
-    {
-        SceneManager.LoadScene("GameOver");
-    }
 }
