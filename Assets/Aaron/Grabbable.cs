@@ -4,8 +4,8 @@ public class Grabbable : MonoBehaviour
 {
     [SerializeField] protected LayerMask pointerFinger;
     [SerializeField] protected LayerMask thumb;
-    protected GameObject pointerTarget;
-    protected GameObject thumbTarget;
+    [SerializeField] protected GameObject pointerTarget;
+    [SerializeField] protected GameObject thumbTarget;
 
     protected CircleCollider2D circleCollider2D;
     protected SpriteRenderer spriteRenderer;
@@ -43,5 +43,10 @@ public class Grabbable : MonoBehaviour
 
             transform.position = betweenFingers;
         }
+    }
+
+    public void FreezeForPlacing()
+    {
+        rigidbody2D.gravityScale = 0.0f;
     }
 }
