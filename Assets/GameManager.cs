@@ -33,8 +33,13 @@ public class GameManager : MonoBehaviour
     private IEnumerator Spawn()
     {
         yield return new WaitForSeconds(1);
-        GameObject item = Instantiate(grabbableItem, spawnpoints[Random.Range(0, spawnpoints.Count)]);
-        item.GetComponent<Grabbable>().SetFingerAndThumb(pointerTarget, thumbTarget);
+
+        Transform spawnpoint = spawnpoints[Random.Range(0, spawnpoints.Count)];
+        GameObject item = Instantiate(grabbableItem, spawnpoint);
+
+        Grabbable grabbable = item.GetComponent<Grabbable>();
+        grabbable.SetFingerAndThumb(pointerTarget, thumbTarget);
+        grabbable.Launch(spawnpoint.up);
 
         StartCoroutine(Spawn());
     }
