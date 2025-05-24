@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class Grabbable : MonoBehaviour
 {
-    [SerializeField] private LayerMask pointerFinger;
-    [SerializeField] private LayerMask thumb;
-    private GameObject pointerTarget;
-    private GameObject thumbTarget;
+    [SerializeField] protected LayerMask pointerFinger;
+    [SerializeField] protected LayerMask thumb;
+    protected GameObject pointerTarget;
+    protected GameObject thumbTarget;
 
-    private CircleCollider2D circleCollider2D;
-    private SpriteRenderer spriteRenderer;
-    private Rigidbody2D rigidbody2D;
+    protected CircleCollider2D circleCollider2D;
+    protected SpriteRenderer spriteRenderer;
+    protected Rigidbody2D rigidbody2D;
 
     private void Awake()
     {
