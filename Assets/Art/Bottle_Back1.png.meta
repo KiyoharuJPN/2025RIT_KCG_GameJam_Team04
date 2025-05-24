@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 22e6f6a7f84e648468c48d1255b6d67b
+guid: f6a43069f9df0b1459b9a6c9dc0dc319
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4145100776150910970
-    second: Bottle_0
+      213: -8771051572424794064
+    second: Bottle_Back1_0
+  - first:
+      213: 9195063491835920436
+    second: Bottle_Back1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,19 +100,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bottle_0
+      name: Bottle_Back1_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3
-        width: 86
-        height: 185
+        x: 7
+        y: 176
+        width: 82
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af7cba8b13b568930800000000000000
-      internalID: 4145100776150910970
+      spriteID: 0302dfed017f64680800000000000000
+      internalID: -8771051572424794064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottle_Back1_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 6
+        width: 76
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4300b0e378d6b9f70800000000000000
+      internalID: 9195063491835920436
       vertices: []
       indices: 
       edges: []
@@ -161,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bottle_0: 4145100776150910970
+      Bottle_Back1_0: -8771051572424794064
+      Bottle_Back1_1: 9195063491835920436
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
