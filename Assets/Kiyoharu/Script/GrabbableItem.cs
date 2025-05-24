@@ -14,6 +14,8 @@ public class GrabbableItem : Grabbable
 
             transform.position = betweenFingers;
             isDraging = true;
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
+
         }
         else
         {
@@ -25,6 +27,7 @@ public class GrabbableItem : Grabbable
                 Destroy(GetComponent<GrabbableItem>());
             }
             isDraging = false;
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
         }
     }
 
