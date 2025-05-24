@@ -30,7 +30,7 @@ public class GrabbableItem : Grabbable
                 return;
             }
             isDraging = false;
-            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = -2;
         }
     }
 
