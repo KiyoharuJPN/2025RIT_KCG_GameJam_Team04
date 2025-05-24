@@ -31,7 +31,7 @@ public class Grabbable : MonoBehaviour
 
     public void Launch(Vector3 direction)
     {
-        rigidbody2D.AddForce(10000 * direction);
+        rigidbody2D.AddForce(5000 * direction);
     }
 
     // Update is called once per frame
