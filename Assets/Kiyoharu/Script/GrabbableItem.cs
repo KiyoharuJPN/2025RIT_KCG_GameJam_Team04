@@ -15,6 +15,7 @@ public class GrabbableItem : Grabbable
             transform.position = betweenFingers;
             isDraging = true;
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
+            rigidbody2D.gravityScale = 9.8f;
 
         }
         else
@@ -25,6 +26,8 @@ public class GrabbableItem : Grabbable
                 gameObject.layer = LayerMask.NameToLayer("BottleItem");
                 Bottleobj.JoinBottle(gameObject);
                 Destroy(GetComponent<GrabbableItem>());
+
+                return;
             }
             isDraging = false;
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;

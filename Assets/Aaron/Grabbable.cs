@@ -4,8 +4,8 @@ public class Grabbable : MonoBehaviour
 {
     [SerializeField] protected LayerMask pointerFinger;
     [SerializeField] protected LayerMask thumb;
-    protected GameObject pointerTarget;
-    protected GameObject thumbTarget;
+    [SerializeField] protected GameObject pointerTarget;
+    [SerializeField] protected GameObject thumbTarget;
 
     protected CircleCollider2D circleCollider2D;
     protected SpriteRenderer spriteRenderer;
@@ -31,7 +31,7 @@ public class Grabbable : MonoBehaviour
 
     public void Launch(Vector3 direction)
     {
-        rigidbody2D.AddForce(10000 * direction);
+        rigidbody2D.AddForce(5000 * direction);
     }
 
     // Update is called once per frame
@@ -43,5 +43,10 @@ public class Grabbable : MonoBehaviour
 
             transform.position = betweenFingers;
         }
+    }
+
+    public void FreezeForPlacing()
+    {
+        rigidbody2D.gravityScale = 0.0f;
     }
 }
