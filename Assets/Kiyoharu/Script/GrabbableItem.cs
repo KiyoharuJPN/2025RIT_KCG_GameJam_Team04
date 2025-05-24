@@ -15,6 +15,7 @@ public class GrabbableItem : Grabbable
             transform.position = betweenFingers;
             isDraging = true;
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
+            rigidbody2D.gravityScale = 9.8f;
 
         }
         else
