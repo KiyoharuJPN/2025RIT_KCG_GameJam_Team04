@@ -19,8 +19,7 @@ public class StageTimer : MonoBehaviour
         }
         if (CheckTimerOver())
         {
-            GameInstance.instance.SaveItems(GameObject.Find("Bottle"));
-            GameInstance.GameOver();
+            GameObject.Find("Bottle").GetComponent<Bottle>().GameOver();
         }
     }
 
