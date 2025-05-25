@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class StageTimer : MonoBehaviour
 {
+    public GameObject FinishImage;
     public float EndSecond;
     private float Timer = 0;
     private bool TimerRunning = true;
@@ -17,9 +18,10 @@ public class StageTimer : MonoBehaviour
         {
             Timer += Time.deltaTime;
         }
-        if (CheckTimerOver())
+        if (TimerRunning && CheckTimerOver())
         {
-            GameObject.Find("Bottle").GetComponent<Bottle>().GameOver();
+            TimerRunning = false;
+            FinishImage.SetActive(true);
         }
     }
 
