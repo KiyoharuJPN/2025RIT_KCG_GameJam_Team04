@@ -19,6 +19,7 @@ public class GrabbableItem : Grabbable
             isDraging = true;
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
             rigidbody2D.gravityScale = 9.8f;
+            SEManager.instance.PlaySE("Catch");
 
         }
         else
@@ -29,6 +30,7 @@ public class GrabbableItem : Grabbable
                 gameObject.layer = LayerMask.NameToLayer("BottleItem");
                 Bottleobj.JoinBottle(gameObject);
                 Destroy(GetComponent<GrabbableItem>());
+                SEManager.instance.PlaySE("InBottle");
 
                 return;
             }
