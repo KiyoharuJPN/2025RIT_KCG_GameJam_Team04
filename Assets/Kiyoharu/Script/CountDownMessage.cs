@@ -1,6 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
-
 public class CountDownMessage : MonoBehaviour
 {
     public float second;
