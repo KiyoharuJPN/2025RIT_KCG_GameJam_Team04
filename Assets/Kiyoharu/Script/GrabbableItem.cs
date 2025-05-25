@@ -13,13 +13,13 @@ public class GrabbableItem : Grabbable
     {
         if (circleCollider2D.IsTouchingLayers(pointerFinger) && circleCollider2D.IsTouchingLayers(thumb))
         {
+            if(isDraging == false) SEManager.instance.PlaySE("Catch");
             Vector3 betweenFingers = (pointerTarget.transform.position + thumbTarget.transform.position) / 2;
 
             transform.position = betweenFingers;
             isDraging = true;
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
             rigidbody2D.gravityScale = 9.8f;
-            SEManager.instance.PlaySE("Catch");
 
         }
         else
