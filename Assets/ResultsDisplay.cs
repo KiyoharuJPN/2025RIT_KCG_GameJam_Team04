@@ -44,7 +44,7 @@ public class ResultsDisplay : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
-        GameObject element = Instantiate(itemsToSpawn[0], spawnpoint.transform.position, Quaternion.identity);
+        GameObject element = Instantiate(itemsToSpawn[0], spawnpoint.transform.position + new Vector3(Random.Range(-0.2f,0.2f),0,0), Quaternion.identity);
         element.transform.localScale = Vector3.one;
 
         itemsToSpawn.RemoveAt(0);
