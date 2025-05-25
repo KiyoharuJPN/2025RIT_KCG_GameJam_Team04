@@ -46,6 +46,7 @@ public class ResultsDisplay : MonoBehaviour
 
         GameObject element = Instantiate(itemsToSpawn[0], spawnpoint.transform.position + new Vector3(Random.Range(-0.2f,0.2f),0,0), Quaternion.identity);
         element.transform.localScale = Vector3.one;
+        SEManager.instance.PlaySE("InBottle");
 
         itemsToSpawn.RemoveAt(0);
 
