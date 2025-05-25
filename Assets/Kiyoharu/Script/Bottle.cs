@@ -5,6 +5,8 @@ public class Bottle : MonoBehaviour
 {
     [SerializeField]
     GameObject TargetTransform;
+
+    Dictionary<string, int> ItemProp = new Dictionary<string, int>();
     List<GameObject> GameObjects = new List<GameObject>();
     int ItemCounter = 0;
     
@@ -30,8 +32,34 @@ public class Bottle : MonoBehaviour
     public void GameOver()
     {
         SetAllItemParent();
+        CreateItemProp();
+        GameInstance.instance.SetItemProp(ItemProp);
         GameInstance.instance.SaveItems(gameObject);
         GameInstance.GameOver();
+    }
+
+    public void CreateItemProp()
+    {
+        ItemProp.Clear();
+
+        foreach (GameObject obj in GameObjects)
+        {
+            string name = obj.name;
+
+            // Remove (Clone) with the clone countermeasure
+            if (name.Contains("(Clone)"))
+                name = name.Replace("(Clone)", "").Trim();
+
+            // If already registered, +1; if not, register at 1
+            if (ItemProp.ContainsKey(name))
+            {
+                ItemProp[name]++;
+            }
+            else
+            {
+                ItemProp[name] = 1;
+            }
+        }
     }
 
     public void SetAllItemParent()
