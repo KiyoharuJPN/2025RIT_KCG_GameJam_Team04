@@ -384,14 +384,14 @@ RectTransform:
   m_GameObject: {fileID: 214722013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3.4199998, y: 1.4923636, z: 3.4199998}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 528206794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -264.11}
+  m_AnchoredPosition: {x: 0, y: -265}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214722015
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8583624080851226831, guid: c7151ef496b0c6f4794395248e363541, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7151ef496b0c6f4794395248e363541, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -718,6 +718,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 5
   countdownSFX: {fileID: 0}
+  countDown3: {fileID: 0}
+  countDown2: {fileID: 0}
+  countDown1: {fileID: 0}
+  go: {fileID: 0}
 --- !u!1 &420786853
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,6 +802,7 @@ GameObject:
   - component: {fileID: 528206797}
   - component: {fileID: 528206796}
   - component: {fileID: 528206795}
+  - component: {fileID: 528206798}
   m_Layer: 5
   m_Name: CountdownCanvas
   m_TagString: Untagged
@@ -891,6 +896,24 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &528206798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528206793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296c69019608df348b3a41ddd28e95bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 5
+  countdownSFX: {fileID: 0}
+  countDown3: {fileID: 662778086}
+  countDown2: {fileID: 1229192883}
+  countDown1: {fileID: 1336608101}
+  go: {fileID: 214722015}
 --- !u!1 &533609868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,7 +1343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &662778085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1330,8 +1353,8 @@ RectTransform:
   m_GameObject: {fileID: 662778084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 528206794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2068,7 +2091,6 @@ GameObject:
   - component: {fileID: 1045794184}
   - component: {fileID: 1045794186}
   - component: {fileID: 1045794185}
-  - component: {fileID: 1045794187}
   - component: {fileID: 1045794188}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -2195,20 +2217,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045794183}
   m_CullTransparentMesh: 1
---- !u!114 &1045794187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045794183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296c69019608df348b3a41ddd28e95bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeLeft: 5
-  countdownSFX: {fileID: 0}
 --- !u!82 &1045794188
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2465,7 +2473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1229192882
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2475,8 +2483,8 @@ RectTransform:
   m_GameObject: {fileID: 1229192881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 528206794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2540,7 +2548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1336608100
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2550,8 +2558,8 @@ RectTransform:
   m_GameObject: {fileID: 1336608099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 528206794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3358,7 +3366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1813147606
 RectTransform:
   m_ObjectHideFlags: 0
