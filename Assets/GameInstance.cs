@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,7 @@ public class GameInstance : MonoBehaviour
 {
     public static GameInstance instance;
 
+    Dictionary<string, int> ItemProp = new Dictionary<string, int>();
     GameObject Items;
 
     private void Awake()
@@ -18,11 +20,23 @@ public class GameInstance : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // test
+        ItemProp.Add("hello",16);
+        ItemProp.Add("world", 18);
     }
+
     
 
 
-
+    public Dictionary<string, int> GetItemProp()
+    {
+        return ItemProp;
+    }
+    public void SetItemProp(Dictionary<string, int> ip)
+    {
+        ItemProp = ip;
+    }
 
     public void SaveItems(GameObject gobj)
     {
@@ -34,9 +48,10 @@ public class GameInstance : MonoBehaviour
     {
         Items.SetActive(true);
         Items.transform.SetParent(null);
+        // ÉoÉOëŒçÙ
+        Items.GetComponent<Bottle>().ResetAllItemParent();
         return Items;
     }
-
 
     public static void GameOver()
     {
