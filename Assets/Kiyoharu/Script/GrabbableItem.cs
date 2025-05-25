@@ -5,6 +5,8 @@ public class GrabbableItem : Grabbable
     private Bottle Bottleobj = null;
     bool isDraging = false;
 
+    public bool IsDragging { get { return isDraging; } }
+
     // Update is called once per frame
     void FixedUpdate()
     {
