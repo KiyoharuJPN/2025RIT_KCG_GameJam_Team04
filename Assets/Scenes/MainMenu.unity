@@ -251,7 +251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 987ae15a05229d547b6972448199c24a, type: 2}
   m_sharedMaterial: {fileID: 2960617880225423216, guid: 987ae15a05229d547b6972448199c24a, type: 2}
@@ -969,16 +969,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6289728943936980397}
-        m_TargetAssemblyTypeName: SEManager, Assembly-CSharp
-        m_MethodName: PlaySE
+      - m_Target: {fileID: 207142935}
+        m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Select
+          m_StringArgument: Tutorial
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1554662029
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: end game
+  m_text: end
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 987ae15a05229d547b6972448199c24a, type: 2}
   m_sharedMaterial: {fileID: 2960617880225423216, guid: 987ae15a05229d547b6972448199c24a, type: 2}
@@ -1313,17 +1313,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8f100ff745f0c34ca3dc12ee3abc847, type: 3}
---- !u!114 &6289728943936980397 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5762184466053513809, guid: b8f100ff745f0c34ca3dc12ee3abc847, type: 3}
-  m_PrefabInstance: {fileID: 6289728943936980396}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc28f3ca416ed9245b3bd6a9a6bc4fa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

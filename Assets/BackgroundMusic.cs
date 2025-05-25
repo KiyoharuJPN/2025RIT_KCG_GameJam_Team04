@@ -34,6 +34,8 @@ public class BackgroundMusic : MonoBehaviour
                 audioSource.Play();
                 break;
             case "Hand Landmark Detection":
+                audioSource.clip = playMusic;
+                audioSource.Play();
                 break;
             case "Tutorial":
                 audioSource.clip = playMusic;
