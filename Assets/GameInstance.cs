@@ -34,6 +34,8 @@ public class GameInstance : MonoBehaviour
     {
         Items.SetActive(true);
         Items.transform.SetParent(null);
+        // ƒoƒO‘Îô
+        Items.GetComponent<Bottle>().ResetAllItemParent();
         return Items;
     }
 
