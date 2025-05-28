@@ -8,56 +8,53 @@ public class SaveRequiredFile : MonoBehaviour
 {
     void Start()
     {
-        //// Check if default config folder exists
-        //string folderPath = Application.persistentDataPath;
-        //if (!Directory.Exists(folderPath))
-        //{
-        //    Directory.CreateDirectory(folderPath); // If you don't have it, make one
-        //}
+        // Check if default config folder exists
+        string folderPath = Application.persistentDataPath;
+        if (!Directory.Exists(folderPath))
+        {
+            Directory.CreateDirectory(folderPath); // If you don't have it, make one
+        }
 
 
-        //// Check whether there is a check file
-        //string filePath = Application.persistentDataPath + "/check.txt";
-        //if (!File.Exists(filePath))
-        //{
-        //    //Debug.LogWarning("配置文件不存在: " + filePath);
-        //    string createcontent = "checkDeployment=false";// If you don't have it, make one and reset
-        //    File.WriteAllText(filePath, createcontent);
-        //    return;
-        //}
+        // Check whether there is a check file
+        string filePath = Application.persistentDataPath + "/check.txt";
+        if (!File.Exists(filePath))
+        {
+            //Debug.LogWarning("配置文件不存在: " + filePath);
+            string createcontent = "checkDeployment=false";// If you don't have it, make one and reset
+            File.WriteAllText(filePath, createcontent);
+        }
 
 
-        //// Verify using the check file
-        //Dictionary<string, string> configMap = new Dictionary<string, string>();
-        //string[] lines = File.ReadAllLines(filePath);
+        // Verify using the check file
+        Dictionary<string, string> configMap = new Dictionary<string, string>();
+        string[] lines = File.ReadAllLines(filePath);
 
-        //foreach (string line in lines)
-        //{
-        //    if (string.IsNullOrWhiteSpace(line) || !line.Contains("="))
-        //        continue;
+        foreach (string line in lines)
+        {
+            if (string.IsNullOrWhiteSpace(line) || !line.Contains('='))
+                continue;
 
-        //    string[] parts = line.Split('=');
-        //    if (parts.Length >= 2)
-        //    {
-        //        string key = parts[0].Trim();
-        //        string value = parts[1].Trim();
-        //        configMap[key] = value;
-        //    }
-        //}
-
-
-        //if (configMap["checkDeployment"] == "false")
-        //{
-        //string sourceFolder = Path.Combine(Application.streamingAssetsPath, "MyFolder"); 
-        //string destinationFolder = Path.Combine(Application.persistentDataPath, "MyFolder");
+            string[] parts = line.Split('=');
+            if (parts.Length >= 2)
+            {
+                string key = parts[0].Trim();
+                string value = parts[1].Trim();
+                configMap[key] = value;
+            }
+        }
 
 
-        //    //処理完了
-        //    string content = "checkDeployment=true";
-        //    File.WriteAllText(filePath, content);
-        //}
+        if (configMap["checkDeployment"] == "false")
+        {
+            // もしファイルがコピーされていなければコピーし直す（中途の場合は全部やり直す）
+            CopyFolder(Application.streamingAssetsPath, Application.persistentDataPath);
 
-        Debug.Log(Application.streamingAssetsPath);
+
+            // 処理完了
+            string content = "checkDeployment=true";
+            File.WriteAllText(filePath, content);
+        }
 
     }
 
